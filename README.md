@@ -1,16 +1,23 @@
-# learning_bloc
+# Bloc-Flutter
 
-A new Flutter application.
+Learning how Bloc Architecture works.
 
-## Getting Started
+## Structure
 
-This project is a starting point for a Flutter application.
+- **/api**
 
-A few resources to get you started if this is your first Flutter project:
+    Will deal with the Network (Api Calls) and the Database.
+- **/blocs**
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+    All the streams, Sinks and methods.
+- **/pages**
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+    All the screens of your app, here come the classes that will import the bloc files and do the magic using the `StreamBuilder` class.
+- **/widgets**
+
+    `bloc_provider.dart` as a generic class for the Bloc Pattern, and you can put inside this folder all the reusable widgets that you might have, like a `ListTile`.
+    
+    
+**IMPORTANT** 
+
+All the imports in the project should start with `import 'package:`, working with two types of imports could be dangerous.
